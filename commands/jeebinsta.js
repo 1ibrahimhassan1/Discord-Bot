@@ -1,5 +1,7 @@
 const puppeteer = require('puppeteer');
 
+let instagram = {};
+
 module.exports = {
     name: 'jeebinsta',
     description: "gets post from a specific instagram's front page",
