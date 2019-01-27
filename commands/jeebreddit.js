@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 
 //will contain list of subReddits already searched so their 
 //index (or number of times searched) is stored separately
+let subReddit = {};
 
 module.exports = {
     name: 'jeebreddit',
