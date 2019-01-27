@@ -27,7 +27,22 @@ module.exports = {
                 })
                 .catch((err) => console.log(err))
                 .then(res => res.json())
-                /*purposefully removed*/
+                .then((data) => {
+                        return new Promise((resolve,reject) => {
+                        if(data.status){
+                        data.status.message === 'Data not found' ? data.result = 10 : data.result = 0;
+                        data.summonerInQuestion = summoner;
+                        reject(data); 
+                        } else{
+                        //since, on success, a status code isn't shipped as part of the
+                        //object, we add it here. 10 is a failure, 20 is success.
+                        //totally arbitrary numbers, btw
+                        data.result = 20;
+                        data.summonerInQuestion = summoner;
+                        resolve(data);
+                        }
+                    }
+                    )}
                 )
                 .catch((rejectedData) => {
                     //console.log('Could not find ' + summonerName + "'s game. The result code is: " + rejectedData.result)
