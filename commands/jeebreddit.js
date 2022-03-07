@@ -6,7 +6,7 @@ let subReddit = {};
 
 module.exports = {
     name: 'jeebreddit',
-    description: "gets post from a specific subreddit's front page",
+    description: "gets post from a specific subreddit's front pag",
     execute(message, messageArr){
         fetch(`https://www.reddit.com/r/${messageArr[1]}.json?limit=100`)
         .then(res => res.json())

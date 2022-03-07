@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 //connecting to server
-let apiKey = '?api_key=RGAPI-3a88808d-7e83-4fde-8429-046ea357a2da';
+let apiKey = '?api_key=RGAPI-3a88808d-7e83-4fde-8429-046ea357a2d';
 const riotUrl = 'https://na1.api.riotgames.com'
 
 //routes

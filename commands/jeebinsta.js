@@ -4,7 +4,7 @@ let instagram = {};
 
 module.exports = {
     name: 'jeebinsta',
-    description: "gets post from a specific instagram's front page",
+    description: "gets post from a specific instagram's front pag",
     postNumber: 0,
     execute(message, messageArr){
         if(message.author.id === '148673724718120960'){

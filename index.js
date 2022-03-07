@@ -8,12 +8,12 @@ const discordClient = new Discord.Client();
 discordClient.commands = new Discord.Collection();
 
 //returns all filenames from commands folder that end in .js
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+const commandFiles = fs.readdirSync('./command').filter(file => file.endsWith('.js'));
 
 //populates the .commands data struct with all of the commands from the 
 //commands file using the names kept in the commandFiles array
 for (const file of commandFiles){
-    const command = require(`./commands/${file}`)
+    const command = require(`./command/${file}`)
 
     discordClient.commands.set(command.name, command);
 }
